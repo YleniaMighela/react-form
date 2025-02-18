@@ -5,6 +5,7 @@
 }
 
 li {
-
+  padding-top: 40px;
   list-style: none;
+  line-height: 0%;
 }

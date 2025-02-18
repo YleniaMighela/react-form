@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-
+import { useState } from 'react';
 
 const disneyDvd = [
 
@@ -21,21 +21,30 @@ const disneyDvd = [
 
 function App() {
 
+  const [listaDvd, setlistaDvd] = useState('Titolo del dvd');
+
+
   return (
     <>
 
+      {/* sezione l'input in cui si inserirà il titolo dell'articolo */}
+      <input type="text" value={listaDvd}
+        onChange={e => { setlistaDvd(e.target.value) }}
+      />
+      {/* <p>Il titolo è {listaDvd}</p> */}
+
+
+
+      {/* sezione in cui vengono iterati gli elementi dell'array */}
       <ul>
         {disneyDvd.map((dvd, index) => (<li key={index}>{dvd}</li>))}
       </ul>
-
     </>
-
-
-
-
-
-
   )
+
+
+
+  // )
 
 
 
