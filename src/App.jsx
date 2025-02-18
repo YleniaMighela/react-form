@@ -23,15 +23,22 @@ function App() {
 
   const [listaDvd, setlistaDvd] = useState('Titolo del dvd');
 
+  const inserisciDvd = event => {
+    event.preventDefault();
+    // console.log('Il titolo del dvd è:' + listaDvd)
+  }
+
 
   return (
     <>
 
       {/* sezione l'input in cui si inserirà il titolo dell'articolo */}
-      <input type="text" value={listaDvd}
-        onChange={e => { setlistaDvd(e.target.value) }}
-      />
-      {/* <p>Il titolo è {listaDvd}</p> */}
+      <form onSubmit={inserisciDvd}>
+        <input type="text" value={listaDvd}
+          onChange={e => { setlistaDvd(e.target.value) }}
+        />
+        <button>Invia</button>
+      </form >
 
 
 
@@ -39,6 +46,7 @@ function App() {
       <ul>
         {disneyDvd.map((dvd, index) => (<li key={index}>{dvd}</li>))}
       </ul>
+
     </>
   )
 
