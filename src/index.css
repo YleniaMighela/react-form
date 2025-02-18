@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-main {
-  text-align: center;
-  padding: 100px;
+li {
+
+  list-style: none;
 }
