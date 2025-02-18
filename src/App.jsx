@@ -25,10 +25,8 @@ function App() {
     <>
 
       <ul>
-        {disneyDvd.map((dvd) => (<li>{dvd}</li>))}
+        {disneyDvd.map((dvd, index) => (<li key={index}>{dvd}</li>))}
       </ul>
-
-
 
     </>
 
